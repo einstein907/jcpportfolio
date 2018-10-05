@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <BannerMenu />
-    <img :src="piece.mainImage"></img>
+    <img :src="piece.mainImage" />
     <div class="card-title">{{piece.title}}</div>
   </div>
 </template>
