@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Montserrat');
+        
+.content {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    color: red;
+    font-family: 'Lora';
+}
+
+h2 {
+    color: black;
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-style: italic;
+    font-size: 15pt;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Montserrat Black', sans-serif;
+    font-size: 50pt;
+}
+
+.card-title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20pt;
+}
