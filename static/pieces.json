@@ -1,29 +1,34 @@
 [
   {
+    "id": 1,
     "title": "Crowned Beauty",
     "description": "It's pretty",
     "mainImage": "/img/crownedbeauty.jpg",
     "otherImages": [ ]
   },
   {
+    "id": 2,
     "title": "Dan Avidan",
     "description": "aka Danny Sexbang",
     "mainImage": "/img/danavidan.jpg",
     "otherImages": [ ]
   },
   {
+    "id": 3,
     "title": "Ru Paul",
     "description": "hello world",
     "mainImage": "/img/rupaul.jpg",
     "otherImages": [ ]
   },
   {
+    "id": 4,
     "title": "Smoke",
     "description": "fancy french lady",
     "mainImage": "/img/smoke.jpg",
     "otherImages": [ ]
   },
   {
+    "id": 5,
     "title": "Untitled",
     "description": "r/redditgetsdrawn piece",
     "mainImage": "/img/untitled.jpg",
