@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <BannerMenu />
-    <h1>About</h1>
+    <div class="page-title">About</div>
   </div>
 </template>
 
