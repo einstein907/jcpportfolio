@@ -1,26 +1,30 @@
 <template>
-  <div class="content">
+  <div>
     <header>
-      <BannerMenu />
+      <NavigationBar />
     </header>
     <body>
-      <h1>Contact</h1>
-      <p> 
-        idk how to do this bit
-      </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <BannerMenu />
+          </div>
+          <div class="col-8">
+            <h1>Contact</h1>
+          </div>
+        </div>
+      </div>
     </body>
-    <footer>
-      <Footer />
-    </footer>
   </div>
 </template>
 
 <script>
 import BannerMenu from '~/components/bannermenu.vue';
+import NavigationBar from '~/components/navigationbar.vue';
 import Footer from '~/components/footer.vue';
 
 export default {
-  components: { BannerMenu, Footer }
+  components: { BannerMenu, Footer, NavigationBar }
 }
 </script>
 

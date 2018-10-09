@@ -1,18 +1,21 @@
 <template>
-<div class="container">
-  <header>
-    <BannerMenu />
-  </header>
-  <div class="row">
-    <nuxt-link :to="`/pieces/${piece.id}`" class="col-sm" v-for="(piece, index) in pieces" :key="index">
-      <h1>{{ piece.title }}</h1>
-      <img :src="piece.mainImage" class="rounded img-thumbnail">
-    </nuxt-link>
+  <div>
+    <header>
+      <NavigationBar />
+    </header>
+    <body>
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <BannerMenu />
+          </div>
+          <div class="col-8">
+            body of stuff
+          </div>
+        </div>
+      </div>
+    </body>
   </div>
-  <footer>
-    <Footer />
-  </footer>
-</div>
 </template>
 
 <script>
@@ -20,6 +23,7 @@ import { mapState } from "vuex";
 import pieces from '../static/pieces.json';
 import BannerMenu from "~/components/bannermenu.vue"
 import Footer from "~/components/footer.vue";
+import NavigationBar from "~/components/navigationbar.vue";
 
 export default {
   fetch({ store }) {
@@ -28,14 +32,9 @@ export default {
   computed: {
     ...mapState(['pieces'])
   },
-  components: { BannerMenu, Footer }
+  components: { BannerMenu, Footer, NavigationBar }
 }
 </script>
 
 <style>
-@import '~/assets/styles.scss'; 
-
-img {
-  width: 200px;
-}
 </style>

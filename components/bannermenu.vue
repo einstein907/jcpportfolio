@@ -1,101 +1,52 @@
 <template>
-    <div class="bannermenu">
-        <div class="row">
-            <div class="col-sm">
-                <div @click="toggle()" align="left">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
-                </div>
-            </div>
-            <div class="col-sm"><h1 align="center">P x P</h1></div>
-            <div class="col-sm">
-                <div align="right">
-                    <nuxt-link :to="`/contact`">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
-                    </nuxt-link>
-                </div>
-            </div>
+    <div>
+        <div align="center">
+            <img class="logo" src="~/static/icon/pxp.jpg"></img><br>
         </div>
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" @click="toggle()">&times;</a>
-            <a href="/">Shop</a>
-            <a href="/about">About</a>
-            <a href="/portfolio">Portfolio</a>
-            <a href="/commission">Commission</a>
-            <a href="/blog">Blog</a>
-            <a href="/contact">Contact</a>
+        <div style="padding-bottom: 50px; padding-top: 30px">
+            <nuxt-link class="menu-item" :to="`/`">shop</nuxt-link><br>
+            <nuxt-link class="menu-item" :to="`/commission`">commission</nuxt-link><br>
+            <nuxt-link class="menu-item" :to="`/portfolio`">portfolio</nuxt-link><br>
+        </div>
+        <div style="padding-bottom: 70px">
+            <nuxt-link class="menu-item" :to="`/blog`">blog</nuxt-link><br>
+            <nuxt-link class="menu-item" :to="`/contact`">contact</nuxt-link><br>
+        </div>
+        <div align="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 6c-3.313 0-6 2.686-6 6 0 2.542 1.581 4.712 3.812 5.587-.052-.475-.1-1.203.022-1.721.108-.468.703-2.982.703-2.982s-.181-.359-.181-.891c0-.834.485-1.457 1.087-1.457.512 0 .759.385.759.845 0 .516-.328 1.285-.497 1.998-.142.598.3 1.084.889 1.084 1.066 0 1.887-1.124 1.887-2.747 0-1.437-1.032-2.441-2.507-2.441-1.707 0-2.709 1.28-2.709 2.604 0 .516.199 1.068.446 1.368.049.06.056.112.041.173l-.165.68c-.027.11-.088.134-.201.081-.75-.349-1.219-1.444-1.219-2.325 0-1.893 1.375-3.63 3.964-3.63 2.082 0 3.7 1.482 3.7 3.465 0 2.068-1.304 3.732-3.114 3.732-.608 0-1.179-.315-1.375-.689l-.374 1.426c-.135.521-.501 1.175-.746 1.573.562.173 1.16.267 1.778.267 3.313 0 6-2.687 6-6 0-3.314-2.687-6-6-6z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 7.082c1.602 0 1.792.006 2.425.035 1.627.074 2.385.845 2.46 2.459.028.633.034.822.034 2.424s-.006 1.792-.034 2.424c-.075 1.613-.832 2.386-2.46 2.46-.633.028-.822.035-2.425.035-1.602 0-1.792-.006-2.424-.035-1.63-.075-2.385-.849-2.46-2.46-.028-.632-.035-.822-.035-2.424s.007-1.792.035-2.424c.074-1.615.832-2.386 2.46-2.46.632-.029.822-.034 2.424-.034zm0-1.082c-1.63 0-1.833.007-2.474.037-2.18.1-3.39 1.309-3.49 3.489-.029.641-.036.845-.036 2.474 0 1.63.007 1.834.036 2.474.1 2.179 1.31 3.39 3.49 3.49.641.029.844.036 2.474.036 1.63 0 1.834-.007 2.475-.036 2.176-.1 3.391-1.309 3.489-3.49.029-.64.036-.844.036-2.474 0-1.629-.007-1.833-.036-2.474-.098-2.177-1.309-3.39-3.489-3.489-.641-.03-.845-.037-2.475-.037zm0 2.919c-1.701 0-3.081 1.379-3.081 3.081s1.38 3.081 3.081 3.081 3.081-1.379 3.081-3.081c0-1.701-1.38-3.081-3.081-3.081zm0 5.081c-1.105 0-2-.895-2-2 0-1.104.895-2 2-2 1.104 0 2.001.895 2.001 2s-.897 2-2.001 2zm3.202-5.922c-.397 0-.72.322-.72.72 0 .397.322.72.72.72.398 0 .721-.322.721-.72 0-.398-.322-.72-.721-.72z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.608 10h-1.359v-.875l.501-1.547v-1.578h-2.623c-1.079 3.184-1.879 4.746-3.13 4.75v-.75h-3.997v6h3.997v-.5h1.003l1.254 1.5h4.23l1.516-1.463v-4.631l-1.392-.906zm.392 5.112l-.919.888h-3.478l-1.254-1.5h-1.352v-2.75c1.862 0 3.04-2.363 3.847-4.75h.906v.396l-.5 1.547v2.057h2.061l.689.448v3.664z"/></svg>
+            <br>
+            <br>
+            <p>copyright 2017-2018.<br>
+            PxP. all rights reserved.</p>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        data: function () {
-            return {
-                isOpen: false
-            }
-        },
-        methods: {
-            toggle: function () {
-                if(this.isOpen === false) {
-                    document.getElementById("mySidenav").style.width = "250px";
-                    this.isOpen = true;
-                } else {
-                    document.getElementById("mySidenav").style.width = "0";
-                    this.isOpen = false;
-                }
-            }
-        }
+        
     }
 </script>
 
 <style>
-@import '~/assets/styles.scss';
+@import '~/assets/styles.scss'; 
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5x;
+img {
+  width: 200px;
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+header {
+  padding-top: 40px;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+.menu-item {
+  margin-left: 40px;  
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
 
-.bannermenu {
-    transition: margin-left .5s;
-    padding: 20px;
 }
-
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-}
-
-.bar span {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-}
-
 </style>
