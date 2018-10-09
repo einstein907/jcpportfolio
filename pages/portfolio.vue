@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row">
           <div class="col-4">
-            <BannerMenu />
+            <LeftNavBar />
           </div>
           <div class="col-8">
             <h1>Portfolio</h1>
@@ -19,12 +19,11 @@
 </template>
 
 <script>
-import BannerMenu from '~/components/bannermenu.vue';
+import LeftNavBar from '~/components/LeftNavBar.vue';
 import NavigationBar from '~/components/navigationbar.vue';
-import Footer from '~/components/footer.vue';
 
 export default {
-  components: { BannerMenu, Footer, NavigationBar }
+  components: { LeftNavBar, NavigationBar }
 }
 </script>
 

@@ -7,10 +7,14 @@
       <div class="container">
         <div class="row">
           <div class="col-4">
-            <BannerMenu />
+            <LeftNavBar />
           </div>
           <div class="col-8">
-            body of stuff
+            <div class="row">
+              <nuxt-link :to="`/pieces/${piece.id}`" class="col-sm" v-for="(piece, index) in pieces" :key="index">
+                <ArtCard :mainImage="piece.mainImage" :title="piece.title" :price="piece.price" :medium="piece.medium" :size="piece.size" />
+              </nuxt-link>
+            </div>
           </div>
         </div>
       </div>
@@ -21,9 +25,9 @@
 <script>
 import { mapState } from "vuex";
 import pieces from '../static/pieces.json';
-import BannerMenu from "~/components/bannermenu.vue"
-import Footer from "~/components/footer.vue";
+import LeftNavBar from "~/components/LeftNavBar.vue"
 import NavigationBar from "~/components/navigationbar.vue";
+import ArtCard from "~/components/artcard.vue";
 
 export default {
   fetch({ store }) {
@@ -32,7 +36,7 @@ export default {
   computed: {
     ...mapState(['pieces'])
   },
-  components: { BannerMenu, Footer, NavigationBar }
+  components: { LeftNavBar, NavigationBar, ArtCard }
 }
 </script>
 

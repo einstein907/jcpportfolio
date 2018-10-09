@@ -4,34 +4,49 @@
     "title": "Crowned Beauty",
     "description": "It's pretty",
     "mainImage": "/img/crownedbeauty.jpg",
-    "otherImages": [ ]
+    "otherImages": [ ],
+    "price": "$50",
+    "medium": "graphite",
+    "size": "9x12in"
   },
   {
     "id": 2,
     "title": "Dan Avidan",
     "description": "aka Danny Sexbang",
     "mainImage": "/img/danavidan.jpg",
-    "otherImages": [ ]
+    "otherImages": [ ],
+    "price": "$50",
+    "medium": "graphite",
+    "size": "9x12in"
   },
   {
     "id": 3,
     "title": "Ru Paul",
     "description": "hello world",
     "mainImage": "/img/rupaul.jpg",
-    "otherImages": [ ]
+    "otherImages": [ ],
+    "price": "$50",
+    "medium": "graphite",
+    "size": "9x12in"
   },
   {
     "id": 4,
     "title": "Smoke",
     "description": "fancy french lady",
     "mainImage": "/img/smoke.jpg",
-    "otherImages": [ ]
+    "otherImages": [ ],
+    "price": "$50",
+    "medium": "graphite",
+    "size": "9x12in"
   },
   {
     "id": 5,
     "title": "Untitled",
     "description": "r/redditgetsdrawn piece",
     "mainImage": "/img/untitled.jpg",
-    "otherImages": [ ]
+    "otherImages": [ ],
+    "price": "$50",
+    "medium": "graphite",
+    "size": "9x12in"
   }
 ]

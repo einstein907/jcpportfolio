@@ -46,7 +46,7 @@ header {
 .menu-item {
   margin-left: 40px;  
   font-family: 'Lato', sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
 
 }
 </style>
