@@ -1,12 +1,17 @@
 <template>
 <div class="container">
-  <BannerMenu />
+  <header>
+    <BannerMenu />
+  </header>
   <div class="row">
-    <div class="col-sm" v-for="(piece, index) in pieces" :key="index">
+    <nuxt-link :to="`/pieces/${piece.id}`" class="col-sm" v-for="(piece, index) in pieces" :key="index">
       <h1>{{ piece.title }}</h1>
       <img :src="piece.mainImage" class="rounded img-thumbnail">
-    </div>
+    </nuxt-link>
   </div>
+  <footer>
+    <Footer />
+  </footer>
 </div>
 </template>
 
@@ -23,7 +28,7 @@ export default {
   computed: {
     ...mapState(['pieces'])
   },
-  components: { BannerMenu }
+  components: { BannerMenu, Footer }
 }
 </script>
 
@@ -31,7 +36,6 @@ export default {
 @import '~/assets/styles.scss'; 
 
 img {
-  height: 200px;
   width: 200px;
 }
 </style>
