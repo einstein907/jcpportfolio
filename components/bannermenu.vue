@@ -29,8 +29,10 @@
 
 <script>
     export default {
-        data: {
-            isOpen: false
+        data: function () {
+            return {
+                isOpen: false
+            }
         },
         methods: {
             toggle: function () {
