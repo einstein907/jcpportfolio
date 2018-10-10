@@ -11,7 +11,7 @@
           </div>
           <div class="col-9">
             <div class="row">
-              <nuxt-link :to="`/pieces/${piece.id}`" class="col-sm" v-for="(piece, index) in pieces" :key="index">
+              <nuxt-link :to="`/portfolio/${piece.id}`" class="col-sm" v-for="(piece, index) in portfolioPieces" :key="index">
                 <div class="card" style="width: 18rem;">
                   <img class="card-img-top" :src="`${piece.mainImage}`" :alt="`${piece.title}`">
                   <div class="card-body">
@@ -32,16 +32,16 @@
 
 <script>
 import { mapState } from "vuex";
-import pieces from '../static/portfolio.json';
+import portfolioPieces from '../static/portfolio.json';
 import LeftNavBar from "~/components/leftnavbar.vue"
 import NavigationBar from "~/components/navigationbar.vue";
 
 export default {
   fetch({ store }) {
-    store.commit('setPieces', pieces)
+    store.commit('setPortfolioPieces', portfolioPieces)
   },
   computed: {
-    ...mapState(['pieces'])
+    ...mapState(['portfolioPieces'])
   },
   components: { LeftNavBar, NavigationBar }
 }

@@ -45,18 +45,13 @@
 <script>
 import LeftNavBar from '~/components/leftnavbar.vue';
 import NavigationBar from '~/components/navigationbar.vue';
-import pieces from '~/static/pieces.json';
+import portfolioPieces from '~/static/portfolio.json';
 
 export default {
     asyncData({ params }) {
-    return { piece: pieces.find(piece => piece.id === parseInt(params.slug, 0)) }
+    return { piece: portfolioPieces.find(piece => piece.id === parseInt(params.slug, 0)) }
   },
   components: { LeftNavBar, NavigationBar }
-  // data: function () {
-  //   return {
-  //     imageSelected: piece.mainImage
-  //   }
-  // }
 }
 </script>
 
