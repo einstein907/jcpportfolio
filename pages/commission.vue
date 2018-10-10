@@ -6,10 +6,10 @@
     <body>
       <div class="container">
         <div class="row">
-          <div class="col-4">
+          <div class="col-3">
             <LeftNavBar />
           </div>
-          <div class="col-8">
+          <div class="col-9">
             <h1>Commission</h1>
           </div>
         </div>
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import LeftNavBar from '~/components/LeftNavBar.vue';
+import LeftNavBar from '~/components/leftnavbar.vue';
 import NavigationBar from '~/components/navigationbar.vue';
 
 export default {

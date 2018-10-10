@@ -5,7 +5,6 @@
     "description": "It's pretty",
     "mainImage": "/img/crownedbeauty.jpg",
     "otherImages": [ ],
-    "price": "$50",
     "medium": "graphite",
     "size": "9x12in",
     "date": "9/21/18"
@@ -16,7 +15,6 @@
     "description": "aka Danny Sexbang",
     "mainImage": "/img/danavidan.jpg",
     "otherImages": [ ],
-    "price": "$50",
     "medium": "graphite",
     "size": "9x12in",
     "date": "9/21/18"
@@ -27,7 +25,6 @@
     "description": "hello world",
     "mainImage": "/img/rupaul.jpg",
     "otherImages": [ ],
-    "price": "$50",
     "medium": "graphite",
     "size": "9x12in",
     "date": "9/21/18"
@@ -38,7 +35,6 @@
     "description": "fancy french lady",
     "mainImage": "/img/smoke.jpg",
     "otherImages": [ ],
-    "price": "$50",
     "medium": "graphite",
     "size": "9x12in",
     "date": "9/21/18"
@@ -49,7 +45,6 @@
     "description": "r/redditgetsdrawn piece",
     "mainImage": "/img/untitled.jpg",
     "otherImages": [ ],
-    "price": "$50",
     "medium": "graphite",
     "size": "9x12in",
     "date": "9/21/18"

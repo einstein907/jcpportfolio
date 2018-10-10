@@ -26,10 +26,10 @@
               <div class="row">
                 <div class="col-12">
                   <p> 
-                    <h1>{{ piece.title }} - {{ piece.price }}</h1>
-                    <b>Medium:</b> {{ piece.medium }}<br>
+                    <h1>{{ piece.title }}</h1>
                     <b>Date Created:</b> {{ piece.date }}<br>
                     <b>Original Size:</b> {{ piece.size }}<br>
+                    <b>Medium:</b> {{ piece.medium }}<br>
                   </p>
                 </div>
               </div>

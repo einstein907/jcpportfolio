@@ -6,13 +6,21 @@
     <body>
       <div class="container">
         <div class="row">
-          <div class="col-4">
+          <div class="col-3">
             <LeftNavBar />
           </div>
-          <div class="col-8">
+          <div class="col-9">
             <div class="row">
               <nuxt-link :to="`/pieces/${piece.id}`" class="col-sm" v-for="(piece, index) in pieces" :key="index">
-                <ArtCard :mainImage="piece.mainImage" :title="piece.title" :price="piece.price" :medium="piece.medium" :size="piece.size" />
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" :src="`${piece.mainImage}`" :alt="`${piece.title}`">
+                  <div class="card-body">
+                    <p class="card-text">
+                      "{{ piece.title }}" - {{ piece.price }}<br>
+                      {{ piece.size }}; {{ piece.medium }}
+                    </p>
+                  </div>
+                </div>
               </nuxt-link>
             </div>
           </div>
@@ -25,9 +33,8 @@
 <script>
 import { mapState } from "vuex";
 import pieces from '../static/pieces.json';
-import LeftNavBar from "~/components/LeftNavBar.vue"
+import LeftNavBar from "~/components/leftnavbar.vue"
 import NavigationBar from "~/components/navigationbar.vue";
-import ArtCard from "~/components/artcard.vue";
 
 export default {
   fetch({ store }) {
@@ -36,7 +43,7 @@ export default {
   computed: {
     ...mapState(['pieces'])
   },
-  components: { LeftNavBar, NavigationBar, ArtCard }
+  components: { LeftNavBar, NavigationBar }
 }
 </script>
 

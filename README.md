@@ -35,3 +35,17 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [ ] Add prints with specific quantity and sizes to cart
 - [ ] Add To Cart component
 - [ ] Integration with Stripe
+
+##Richard Help Things
+- [ ] Generic website width & layout
+- [ ] navigation button styling
+- [ ] integration of stripe
+- [ ] letting as many photos as possible fill the page
+- [ ] formatting portfolio view & shop item view (cards)
+    - [ ] image carosel
+    - [ ] adding shop radio button things
+    - [ ] add to cart button
+- [ ] blog?
+- [ ] contact me page
+- [ ] commission page, inline tab thing
+- [ ] social media linkage
