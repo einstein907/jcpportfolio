@@ -2,6 +2,7 @@
   <div class="container">
     <Header />
 
+    <ShopHeader />
     <no-ssr>
       <div v-masonry 
         transition-duration="3s" 
@@ -25,6 +26,7 @@ import pieces from '../static/pieces.json';
 import NoSSR from 'vue-no-ssr';
 import Footer from '~/components/footer.vue';
 import Header from '~/components/header.vue';
+import ShopHeader from '~/components/shop-header.vue';
 
 export default {
   fetch({ store }) {
@@ -36,7 +38,8 @@ export default {
   components: {
     'no-ssr': NoSSR,
     Footer,
-    Header
+    Header,
+    ShopHeader
   },
   mounted () {
     if (typeof this.$redrawVueMasonry === 'function') {

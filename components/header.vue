@@ -9,7 +9,7 @@
 
         <b-navbar-nav>
           <b-nav-item href="/" class="menu-item">portfolio</b-nav-item>
-          <b-nav-item href="#" class="menu-item">prints + commissions</b-nav-item>
+          <b-nav-item href="/prints" class="menu-item">prints + commissions</b-nav-item>
           <b-nav-item href="/info" class="menu-item">info</b-nav-item>
           <b-nav-item href="#" class="menu-item">contact</b-nav-item>
           <b-nav-item href="#" class="menu-item">news</b-nav-item>
