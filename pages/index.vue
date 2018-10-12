@@ -31,7 +31,6 @@
         </div>
       </div>
     </no-ssr>
-
     <Footer />
   </div>
 </template>
