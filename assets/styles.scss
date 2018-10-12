@@ -1,7 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Lora|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Oswald');
         
 .content {
     max-width: 900px;
     margin: auto;
 }
 
+.art-card {
+    width: 200px;
+  }
+  
+.title {
+    font-family: 'Oswald';
+    font-size: 18pt;
+}
+
+.col-centered {
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.grid {
+    margin: 0 auto;
+}
+
+.menu-item {
+    font-family: 'EB Garamound';
+    font-size: 14pt;
+}
