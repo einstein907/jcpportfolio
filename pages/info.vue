@@ -1,22 +1,14 @@
 <template>
-  <div>
-    <header>
-      <NavigationBar />
-    </header>
+  <div class="container">
+    <Header />
+
     <body>
       <div class="container">
-        <div class="row">
-          <div class="col-3">
-            <LeftNavBar />
-          </div>
-          <div class="col-9">
-            <div class="container">
               <div class="row">
                 <div class="col">
                   <img src="~/static/img/profile.jpg" style="width: 100%"></img>
                 </div>
                 <div class="col">
-                  <h1>About</h1>
                   <p> 
                     Jenna Palmer is a Saint Louis based artist who's art is heavily influenced by 
                     common era realism and photorealism in illustration. Her self-taught study of human anatomy 
@@ -32,22 +24,24 @@
                 </div>
               </div>
             </div>
-            
-          </div>
-        </div>
-      </div>
     </body>
+    
+    <Footer />
   </div>
 </template>
 
 <script>
-import LeftNavBar from '~/components/leftnavbar.vue';
-import NavigationBar from '~/components/navigationbar.vue';
+import Footer from '~/components/footer.vue';
+import Header from '~/components/header.vue';
 
 export default {
-  components: { LeftNavBar, NavigationBar }
+  components: {
+    Footer,
+    Header
+  }
 }
 </script>
 
 <style>
+@import '~/assets/styles.scss';
 </style>

@@ -9,29 +9,29 @@
         class="masonry-container grid" 
         fit-width="true"
       >
-        <div v-masonry-tile class="item" :key="index" v-for="(piece, index) in portfolioPieces">
+        <div v-masonry-tile class="item" :key="index" v-for="(piece, index) in pieces">
           <img class="art-card" :src="`${piece.mainImage}`"></img>
         </div>
       </div>
     </no-ssr>
-
+    
     <Footer />
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
-import portfolioPieces from '../static/portfolio.json';
+import pieces from '../static/pieces.json';
 import NoSSR from 'vue-no-ssr';
 import Footer from '~/components/footer.vue';
 import Header from '~/components/header.vue';
 
 export default {
   fetch({ store }) {
-    store.commit('setPortfolioPieces', portfolioPieces)
+    store.commit('setPieces', pieces)
   },
   computed: {
-    ...mapState(['portfolioPieces'])
+    ...mapState(['pieces'])
   },
   components: {
     'no-ssr': NoSSR,
