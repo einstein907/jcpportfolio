@@ -1,7 +1,6 @@
 <template>
     <div>
         <div align="center">
-            <img class="logo" src="~/static/icon/pxp.jpg"></img><br>
         </div>
         <div style="padding-bottom: 50px; padding-top: 30px">
             <nuxt-link class="menu-item" :to="`/`">shop</nuxt-link><br>

@@ -3,7 +3,6 @@
         <div class="row">
             <div class="col-lg nav-bar-menu" align="right">
             <nuxt-link :to="`/about`" class="nav-bar-menu-item">about</nuxt-link>
-            <img src="~/static/icon/iconmonstr-shopping-cart-3-240.png" style="height: 40px; width: auto"></img>
             </div>
         </div>
     </div>
