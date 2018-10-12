@@ -9,7 +9,7 @@
       <b-collapse is-nav id="nav_collapse">
 
         <b-navbar-nav>
-          <b-nav-item href="#" class="menu-item">portfolio</b-nav-item>
+          <b-nav-item href="/" class="menu-item">portfolio</b-nav-item>
           <b-nav-item href="#" class="menu-item">prints + commissions</b-nav-item>
           <b-nav-item href="#" class="menu-item">contact</b-nav-item>
           <b-nav-item href="#" class="menu-item">news</b-nav-item>

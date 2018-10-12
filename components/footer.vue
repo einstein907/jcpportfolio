@@ -1,7 +1,6 @@
 <template>
     <div>
         <div class="container email-signup">
-            <p>blah</p>
             <div class="row email-title">
                 <div class="col-lg">
                     Blah blah blah
@@ -14,14 +13,12 @@
             </div>
             <div class="row">
                 <div class="col-lg">
-                    <b-form inline>
-                        <label class="sr-only" for="inlineFormInputName2">Name</label>
-                        <b-input class="mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" placeholder="First & Last Name" />
-                        <label class="sr-only" for="inlineFormInputGroupUsername2">Email</label>
-                        <b-input-group left="@" class="mb-2 mr-sm-2 mb-sm-0">
-                            <b-input id="inlineFormInputGroupUsername2" placeholder="Email Address" />
-                        </b-input-group>
-                        <b-button variant="primary">Save</b-button>
+                    <b-form inline @submit="onSubmit" @reset="onReset">
+                        <label class="sr-only" for="Name">Name</label>
+                        <b-input class="mb-2 mr-sm-2 mb-sm-0" id="Name" v-model="form.name" placeholder="First & Last Name" />
+                        <label class="sr-only" for="Email">Email</label>
+                        <b-input class="mb-2 mr-sm-2 mb-sm-0" id="Email" v-model="form.email" placeholder="Email Address" />
+                        <b-button class="submit-button" type="submit">Save</b-button>
                     </b-form>
                 </div>
             </div>
@@ -42,7 +39,31 @@
 
 <script>
 export default {
-    
+  data () {
+    return {
+      form: {
+        name: '',
+        email: '',
+      }
+    }
+  },
+  methods: {
+    onSubmit (evt) {
+      evt.preventDefault();
+      alert(JSON.stringify(this.form));
+    },
+    onReset (evt) {
+      evt.preventDefault();
+      /* Reset our form values */
+      this.form.email = '';
+      this.form.name = '';
+      this.form.food = null;
+      this.form.checked = [];
+      /* Trick to reset/clear native browser form validation state */
+      this.show = false;
+      this.$nextTick(() => { this.show = true });
+    }
+  }
 }
 </script>
 
@@ -103,6 +124,11 @@ ul.social-icons {
 }
 .email-signup {
     background-color: #18a2b8;
+}
+
+.submit-button {
+    background-color: #FFD700;
+    color: black;
 }
 
 </style>

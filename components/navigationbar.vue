@@ -2,7 +2,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg nav-bar-menu" align="right">
-            <nuxt-link :to="`/about`" class="nav-bar-menu-item">about</nuxt-link>
             </div>
         </div>
     </div>
