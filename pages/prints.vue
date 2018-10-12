@@ -9,9 +9,12 @@
         item-selector=".item" 
         class="masonry-container grid" 
         fit-width="true"
+        gutter="10"
       >
         <div v-masonry-tile class="item" :key="index" v-for="(piece, index) in pieces">
-          <img class="art-card" :src="`${piece.mainImage}`"></img>
+          <nuxt-link :to="`/pieces/${piece.id}`">
+            <img class="art-card" :src="`${piece.mainImage}`"></img>
+          </nuxt-link>
         </div>
       </div>
     </no-ssr>

@@ -1,69 +1,44 @@
 <template>
-  <div>
-    <header>
-      <NavigationBar />
-    </header>
+  <div class="container">
+    <Header />
+    <ShopHeader />
+
     <body>
       <div class="container">
-        <div class="row">
-          <div class="col-3">
-            <LeftNavBar />
-          </div>
-          <div class="col-9">
-            <div class="container">
               <div class="row">
-                <div class="col-12">
+                <div class="col-3">
+                  <div class="piece-title">{{ piece.title }}</div>
+                  <div class="description">blah</div>
+                </div>
+                <div class="col-9">
                   <img :src="piece.mainImage" style="width: 100%"></img>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-12">
-                  <img :src="piece.mainImage" class="preview-image"></img>
-                  <img :src="piece.mainImage" class="preview-image"></img>
-                  <img :src="piece.mainImage" class="preview-image"></img>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <p> 
-                    <h1>{{ piece.title }} - {{ piece.price }}</h1>
-                    <b>Medium:</b> {{ piece.medium }}<br>
-                    <b>Date Created:</b> {{ piece.date }}<br>
-                    <b>Original Size:</b> {{ piece.size }}<br>
-                  </p>
-                </div>
-              </div>
             </div>
-            <div class="card-title">buy things from here</div>
-          </div>
-        </div>
-      </div>
     </body>
+    
+    <Footer />
   </div>
 </template>
 
 <script>
-import LeftNavBar from '~/components/leftnavbar.vue';
-import NavigationBar from '~/components/navigationbar.vue';
+import Footer from '~/components/footer.vue';
+import Header from '~/components/header.vue';
 import pieces from '~/static/pieces.json';
+import ShopHeader from '~/components/shop-header.vue';
 
 export default {
-    asyncData({ params }) {
+  asyncData({ params }) {
     return { piece: pieces.find(piece => piece.id === parseInt(params.slug, 0)) }
   },
-  components: { LeftNavBar, NavigationBar }
-  // data: function () {
-  //   return {
-  //     imageSelected: piece.mainImage
-  //   }
-  // }
+  components: {
+    Footer,
+    Header,
+    ShopHeader
+  }
 }
 </script>
 
 <style>
-.preview-image {
-  width: 250px;
-  margin: auto;
-  padding: 20px;
-}
+@import '~/assets/styles.scss';
 </style>
