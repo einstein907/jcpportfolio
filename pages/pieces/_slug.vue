@@ -5,16 +5,23 @@
 
     <body>
       <div class="container">
-              <div class="row">
-                <div class="col-3">
-                  <div class="piece-title">{{ piece.title }}</div>
-                  <div class="description">blah</div>
-                </div>
-                <div class="col-9">
-                  <img :src="piece.mainImage" style="width: 100%"></img>
-                </div>
-              </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="piece-title">{{ piece.title }} #{{ piece.id }}</div>
+            <div class="description">
+              <ul>
+                <li>Size: {{ piece.size }}</li>
+                <li>{{ piece.medium }}</li>
+                <li>{{ piece.description }}</li>
+
+              </ul>
             </div>
+          </div>
+          <div class="col-9">
+            <img :src="piece.mainImage" style="width: 100%"></img>
+          </div>
+        </div>
+      </div>
     </body>
     
     <Footer />
